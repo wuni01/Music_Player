@@ -1,0 +1,119 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="8"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/SLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="2dp">
+
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ABC571"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/song_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/song_Progress"
+            android:layout_marginBottom="1dp"
+            android:gravity="top|center"
+            android:text="노래를 선택해주세요." />
+
+        <SeekBar
+            android:id="@+id/song_Progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="24dp"
+            android:visibility="visible"
+            android:theme="@style/SeekBarColor"/>
+
+        <TextView
+            android:id="@+id/current_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="9dp"
+            android:text="XX:XX" />
+
+        <TextView
+            android:id="@+id/full_song_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="9dp"
+            android:text="XX:XX" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:background="#ABC571" >
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="재생" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="131dp"
+            android:layout_weight="1"
+            android:text="일시 정지" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:layout_weight="1"
+            android:text="중지" />
+
+        <CheckBox
+            android:id="@+id/rePlay"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-26dp"
+            android:layout_marginBottom="-3dp"
+            android:buttonTint="#669900"
+            android:text="반복" />
+
+    </RelativeLayout>
+
+</LinearLayout>
